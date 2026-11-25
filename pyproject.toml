@@ -16,21 +16,23 @@ classifiers = [
     "License :: OSI Approved :: MIT License"
 ]
 dependencies = [
+    "ipykernel>=7.3.0",
     "ipython",
     "jupyterlab",
+    "kagglehub[pandas-datasets]>=1.0.3",
     "loguru",
     "matplotlib",
-    "notebook",
     "numpy",
     "pandas",
     "pip",
     "python-dotenv",
     "ruff",
     "scikit-learn",
+    "scipy>=1.15.3",
     "tqdm",
     "typer",
 ]
-requires-python = "~=3.10.0"
+requires-python = ">=3.12"
 
 
 [tool.ruff]
