@@ -1,0 +1,47 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "financial_fraud_detector"
+version = "0.0.1"
+description = "Caso de estudio para construir un detector de anomal\u00edas financieras que aprenda de la geometr\u00eda de las transacciones leg\u00edtimas, para posteriormente identificar aquellas transacciones que se alejan del comportamiento esperado."
+authors = [
+  { name = "Carlos Sotomayor" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+dependencies = [
+    "ipython",
+    "jupyterlab",
+    "loguru",
+    "matplotlib",
+    "notebook",
+    "numpy",
+    "pandas",
+    "pip",
+    "python-dotenv",
+    "ruff",
+    "scikit-learn",
+    "tqdm",
+    "typer",
+]
+requires-python = "~=3.10.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["financial_fraud_detector"]
+include = ["pyproject.toml", "financial_fraud_detector/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["financial_fraud_detector"]
+force-sort-within-sections = true
+
